@@ -50,20 +50,6 @@ services:
           cpus: '0.10'
           memory: 16M
 
-  docker-exporter:
-    image: basi/socat:${DOCKER_EXPORTER_VERSION:-v0.1.0}
-    networks:
-      - monitoring
-    deploy:
-      mode: global
-      resources:
-        limits:
-          cpus: '0.05'
-          memory: 6M
-        reservations:
-          cpus: '0.05'
-          memory: 4M
-
   prometheus:
     image: lejolly/prometheus-swarm:${PROMETHEUS_SWARM_VERSION:-latest}
     ports:
