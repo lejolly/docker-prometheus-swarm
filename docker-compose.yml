@@ -65,7 +65,7 @@ services:
           memory: 4M
 
   prometheus:
-    image: basi/prometheus-swarm:${PROMETHEUS_SWARM_VERSION:-v0.4.1}
+    build: .
     ports:
       - "9090"
     networks:
