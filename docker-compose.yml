@@ -22,10 +22,10 @@ services:
       mode: global
       resources:
         limits:
-          cpus: '0.10'
+          cpus: '0.50'
           memory: 128M
         reservations:
-          cpus: '0.10'
+          cpus: '0.50'
           memory: 64M
 
   node-exporter:
@@ -44,10 +44,10 @@ services:
       mode: global
       resources:
         limits:
-          cpus: '0.10'
+          cpus: '0.20'
           memory: 32M
         reservations:
-          cpus: '0.10'
+          cpus: '0.20'
           memory: 16M
 
   prometheus:
@@ -62,7 +62,7 @@ services:
       replicas: 1
       resources:
         limits:
-          cpus: '0.50'
+          cpus: '0.75'
           memory: 1024M
         reservations:
           cpus: '0.50'
