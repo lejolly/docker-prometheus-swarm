@@ -65,7 +65,7 @@ services:
           memory: 4M
 
   prometheus:
-    build: .
+    image: lejolly/prometheus-swarm:${PROMETHEUS_SWARM_VERSION:-latest}
     ports:
       - "9090"
     networks:
